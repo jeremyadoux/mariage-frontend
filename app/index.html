@@ -28,7 +28,7 @@
 <!-- === MENU === -->
 
 <div class="container-fluid">
-    <a class="brand hidden-phone" href="index.html"><img src="assets/img/logo.png" alt=""> MODUS</a>
+    <a class="brand hidden-phone" href="index.html"><img src="/static/img/logo.png" alt=""> MODUS</a>
 
     <div id="dl-menu" class="dl-menuwrapper">
         <button class="dl-trigger">Open Menu</button>
@@ -195,7 +195,7 @@
             <div class="span4">
                 <div class="grid mask">
                     <figure>
-                        <img src="assets/img/portfolio/folio01.jpg" alt="">
+                        <img src="/static/img/folio01.jpg" alt="">
                         <figcaption>
                             <h5>MOUNTAIN LOVE</h5>
                             <a href="single-project.html">Take a look</a>
@@ -223,7 +223,7 @@
             <div class="span4">
                 <div class="grid mask">
                     <figure>
-                        <img src="assets/img/portfolio/folio02.jpg" alt="">
+                        <img src="/static/img/folio02.jpg" alt="">
                         <figcaption>
                             <h5>MOUNTAIN LOVE</h5>
                             <a href="single-project.html">Take a look</a>
@@ -244,7 +244,7 @@
             <div class="span4">
                 <div class="grid mask">
                     <figure>
-                        <img src="assets/img/portfolio/folio03.jpg" alt="">
+                        <img src="/static/img/folio03.jpg" alt="">
                         <figcaption>
                             <h5>AUDI PROMOTION</h5>
                             <a href="single-project.html">Take a look</a>
@@ -260,7 +260,7 @@
             <div class="span4">
                 <div class="grid mask">
                     <figure>
-                        <img src="assets/img/portfolio/folio04.jpg" alt="">
+                        <img src="/static/img/folio04.jpg" alt="">
                         <figcaption>
                             <h5>AUDI PROMOTION</h5>
                             <a href="single-project.html">Take a look</a>
@@ -298,7 +298,7 @@
                 <div id="cbp-qtrotator" class="cbp-qtrotator">
                     <!-- QUOTE 1 -->
                     <div class="cbp-qtcontent">
-                        <img src="assets/img/1.jpg" alt="img01" class="img-circle">
+                        <img src="/static/img/1.jpg" alt="img01" class="img-circle">
                         <blockquote>
                             <p>Thank you so much for all. Your work was amazing, our site is now exactly what we
                                 want.</p>
@@ -307,7 +307,7 @@
                     </div>
                     <!-- QUOTE 2 -->
                     <div class="cbp-qtcontent">
-                        <img src="assets/img/2.jpg" alt="img02" class="img-circle">
+                        <img src="/static/img/2.jpg" alt="img02" class="img-circle">
                         <blockquote>
                             <p>Modus made more than expected. Talented people working side by side to help us to
                                 growth.</p>
@@ -382,8 +382,19 @@
     <!-- /container-fluid -->
 </div>
 
+<!-- inject element in ui view from routing angular -->
+<span ui-view></span>
+
 <!-- inject:js -->
 <!-- endinject -->
+
+<script>
+    $(function() {
+        $( '#dl-menu' ).dlmenu({
+            animationClasses : { classin : 'dl-animate-in-5', classout : 'dl-animate-out-5' }
+        });
+    });
+</script>
 
 </body>
 </html>

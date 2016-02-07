@@ -2,6 +2,8 @@
 .idea
 static/css/*
 static/fonts/*
+static/font/*
+static/img/*
 static/html/*
 static/images/*
 static/js/*

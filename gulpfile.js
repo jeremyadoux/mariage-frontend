@@ -22,6 +22,13 @@ gulp.task('move-font', function() {
         .pipe(gulp.dest('./static/font'));
 });
 
+gulp.task('move-img', function() {
+    return gulp.src('./app/theme/img/**/*')
+        .pipe(rename({dirname: ''}))
+        .pipe(gulp.dest('./static/img'));
+});
+
+
 
 gulp.task('inject-src', ['move-js', 'move-css'], function() {
     var target = gulp.src('./app/**/*.html');
@@ -45,4 +52,4 @@ gulp.task('watch', function () {
     }));
 });
 
-gulp.task('build', ['inject-src', 'move-font']);
+gulp.task('build', ['inject-src', 'move-font', 'move-img']);
