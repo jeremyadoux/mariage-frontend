@@ -1,0 +1,78 @@
+﻿/*!
+ * MODUS - Multipurpose Theme
+ *
+ * Copyright 2013 
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Created by: Carlos Alvarez
+ * URL: http://www.basicoh.com
+ * Designed and built based on Twitter Bootstrap.
+ * Tags: multipurpose, agency theme, one page, single page, responsive, flat */
+
+/* COLOR CONFIGURATION */
+
+.accordion-heading a {
+	color:#c0392b;
+}
+
+.accordion-heading a:hover {
+	color: #c0392b;
+}
+
+blockquote {
+  border-left: 6px solid #c0392b;
+}
+
+.modus_color_transition:hover {
+	color           : #c0392b;
+	text-decoration : none;
+}
+
+h5.title-small, h6.title-small {
+	background:#c0392b; 
+}
+
+.grid figcaption {
+	background: #c0392b;
+}
+
+.whitezone a {
+	color:#c0392b;
+}
+
+.whitezone li_ {
+	color: #c0392b;
+}
+
+.aboutzone {
+	border-top: #c0392b thick solid;
+}
+
+.blog-date h6 {
+	color: #c0392b;
+}
+
+.blog-post a {
+	color: #c0392b;	
+}
+
+.blog-post i {
+	color: #c0392b;
+}
+
+.popular-posts li em {
+	color:#c0392b; 
+}
+
+.button-b a {
+	background-color:#c0392b;
+}
+
+.cbp-qtprogress {
+	background: #c0392b;
+}
+
+.bar {
+  background: #c0392b !important;   
+}
+

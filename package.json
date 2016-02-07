@@ -1,0 +1,25 @@
+{
+  "name": "mariage-frontend",
+  "version": "1.0.0",
+  "description": "Mariage frontend",
+  "repository": {
+    "type": "git"
+  },
+  "author": "jadoux",
+  "homepage": "http://mariage.fr",
+  "devDependencies": {
+    "bower": "latest",
+    "http": "latest",
+    "path": "latest",
+    "url": "latest",
+    "fs": "latest",
+    "git": "latest",
+    "git-cli": "latest",
+    "gulp": "latest",
+    "gulp-inject": "latest",
+    "gulp-rename": "latest",
+    "gulp-watch": "latest",
+    "gulp-batch": "latest",
+    "del": "latest"
+  }
+}

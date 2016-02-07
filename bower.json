@@ -1,0 +1,20 @@
+{
+  "name": "mariage-frontend",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "angular": "latest",
+    "angular-sanitize": "latest",
+    "angular-cookies": "latest",
+    "angular-resource" : "latest",
+    "angular-ui-router" : "latest",
+    "angular-file-upload" : "latest",
+    "ckeditor": "latest",
+    "angular-ckeditor": "latest",
+    "jquery-ui": "latest"
+  }
+}
