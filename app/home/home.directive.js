@@ -23,10 +23,11 @@
         return directive;
     }
 
-    blockContentController.$inject = ['Block', 'FileUploader'];
+    blockContentController.$inject = ['Block', 'FileUploader', 'LoopBackAuth'];
 
-    function blockContentController(Block, FileUploader) {
+    function blockContentController(Block, FileUploader, LoopBackAuth) {
         var vm = this;
+        vm.canEdit = LoopBackAuth.accessTokenId != null;
         vm.showEdited = false;
         vm.urlApi = "http://192.168.100.100:443";
         //Function definition

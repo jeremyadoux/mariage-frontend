@@ -4,7 +4,7 @@
         <div  class="span4"></div><!-- /span4 -->
         <div class="row-fluid">
             <span ng-hide="content.showEdit">
-                <span class="edit-block" ng-click="vm.modeEdit($index)">Edit</span>
+                <span ng-if="vm.canEdit" class="edit-block" ng-click="vm.modeEdit($index)">Edit</span>
                 <div class="span2" ng-if="$index % 4 == 0">
                     <img ng-src="{{content.imgUrl}}" alt="">
                 </div><!-- /span2 -->
@@ -34,7 +34,7 @@
 
             <span ng-if="vm.contents.length > ($index + 1)">
                 <span ng-hide="vm.contents[$index + 1].showEdit">
-                    <span class="edit-block" ng-click="vm.modeEdit($index + 1)">Edit</span>
+                    <span ng-if="vm.canEdit" class="edit-block" ng-click="vm.modeEdit($index + 1)">Edit</span>
                     <div class="span2" ng-if="$index % 4 == 0">
                         <img ng-src="{{vm.contents[$index + 1].imgUrl}}" alt="">
                     </div><!-- /span2 -->
@@ -65,7 +65,7 @@
 
     <span ng-if="$index == 0">
         <span ng-hide="content.showEdit">
-            <span class="edit-block" ng-click="vm.modeEdit($index)">Edit</span>
+            <span ng-if="vm.canEdit" class="edit-block" ng-click="vm.modeEdit($index)">Edit</span>
             <div class="span2">
                 <img ng-src="{{content.imgUrl}}" alt="">
             </div><!-- /span2 -->
@@ -92,7 +92,7 @@
 
         <span ng-if="vm.contents.length > ($index + 1)">
             <span ng-hide="vm.contents[$index + 1].showEdit">
-                <span class="edit-block" ng-click="vm.modeEdit($index + 1)">Edit</span>
+                <span ng-if="vm.canEdit" class="edit-block" ng-click="vm.modeEdit($index + 1)">Edit</span>
                 <div class="span2">
                     <img ng-src="{{vm.contents[$index + 1].imgUrl}}" alt="">
                 </div><!-- /span2 -->
@@ -120,9 +120,7 @@
 <br ng-repeat-end ng-if="$index % 2 == 0" />
 
 
-
-
-<div class="row-fluid">
+<div class="row-fluid"  ng-if="vm.canEdit" >
     <form name="addBlockForm" ng-submit="vm.addBlock()" novalidate method="POST">
         <input type="text" ng-model="vm.addContent.title" />
 

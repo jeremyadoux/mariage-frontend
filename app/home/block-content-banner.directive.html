@@ -1,7 +1,7 @@
 <div id="headerwrap" ng-style="vm.content.styleImage">
     <header class="clearfix">
         <div class="container" ng-if="!vm.showEdited">
-            <span class="edit-block" ng-click="vm.showEdited = !vm.showEdited">Edit</span>
+            <span ng-if="vm.canEdit" class="edit-block" ng-click="vm.showEdited = !vm.showEdited">Edit</span>
             <h1 ng-bind="vm.content.title"></h1>
             <p ng-bind-html="vm.content.text"></p>
         </div>

@@ -24,6 +24,18 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
             url: '/logistique',
             templateUrl: 'map.html',
             controller: 'MapController'
+        })
+        .state('login', {
+            url: '/login',
+            templateUrl: 'login.html',
+            controller: 'loginController',
+            controllerAs: 'vm'
+        })
+        .state('logout', {
+            url: '/logout',
+            templateUrl: 'logout.html',
+            controller: 'logoutController',
+            controllerAs: 'vm'
         });
     $urlRouterProvider.otherwise('accueil');
 }]);

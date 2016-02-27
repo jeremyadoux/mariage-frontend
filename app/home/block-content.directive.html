@@ -1,6 +1,6 @@
 <div class="span4 greyzone">
     <span ng-if="!vm.showEdited">
-        <span class="edit-block" ng-click="vm.showEdited = !vm.showEdited">Edit</span>
+        <span ng-if="vm.canEdit" class="edit-block" ng-click="vm.showEdited = !vm.showEdited">Edit</span>
         <h4 ng-bind="vm.content.title"></h4>
         <span ng-bind-html="vm.content.text"></span>
     </span>
