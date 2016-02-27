@@ -15,7 +15,7 @@ function newsListDirective() {
     return {
         restrict: 'EA',
         scope: {
-            config: "=config"
+            config: "="
         },
         controller: [
             "$scope",

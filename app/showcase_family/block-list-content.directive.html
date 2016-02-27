@@ -1,0 +1,137 @@
+<!-- TEAM FIRST LINE -->
+<div class="row-fluid" ng-repeat-start="content in vm.contents" ng-if="$index % 2 == 0">
+    <span ng-if="$index != 0">
+        <div  class="span4"></div><!-- /span4 -->
+        <div class="row-fluid">
+            <span ng-hide="content.showEdit">
+                <span class="edit-block" ng-click="vm.modeEdit($index)">Edit</span>
+                <div class="span2" ng-if="$index % 4 == 0">
+                    <img ng-src="{{content.imgUrl}}" alt="">
+                </div><!-- /span2 -->
+
+                <div class="span2 aboutzone">
+                    <p><b ng-bind="content.title"></b></p>
+                    <p ng-bind="content.text"></p>
+                </div><!-- /span2 -->
+
+                <div class="span2" ng-if="$index % 4 != 0">
+                    <img ng-src="{{content.imgUrl}}" alt="">
+                </div><!-- /span2 -->
+            </span>
+            <span ng-show="content.showEdit">
+                <form name="editBlockForm" ng-submit="vm.editBlock()" novalidate method="POST">
+                    <input type="text" ng-model="content.title" />
+
+                    <div class="progress" ng-show="vm.editUploader.isUploading">
+                        <div class="progress-bar" role="progressbar" ng-style="{ 'width': vm.editUploader.progress + '%' }"></div>
+                    </div>
+                    <input ng-hide="vm.editUploader.isUploading" type="file" nv-file-select="" uploader="vm.editUploader" />
+
+                    <input type="textarea" ng-model="content.text" />
+                    <button type="submit">Sauvegarder</button>
+                </form>
+            </span>
+
+            <span ng-if="vm.contents.length > ($index + 1)">
+                <span ng-hide="vm.contents[$index + 1].showEdit">
+                    <span class="edit-block" ng-click="vm.modeEdit($index + 1)">Edit</span>
+                    <div class="span2" ng-if="$index % 4 == 0">
+                        <img ng-src="{{vm.contents[$index + 1].imgUrl}}" alt="">
+                    </div><!-- /span2 -->
+                    <div class="span2 aboutzone">
+                        <p><b>{{vm.contents[$index + 1].title}}</b></p>
+                        <p>{{vm.contents[$index + 1].text}}</p>
+                    </div><!-- /span2 -->
+                    <div class="span2" ng-if="$index % 4 != 0">
+                        <img ng-src="{{vm.contents[$index + 1].imgUrl}}" alt="">
+                    </div><!-- /span2 -->
+                </span>
+                <span ng-show="vm.contents[$index + 1].showEdit">
+                    <form name="editBlockForm" ng-submit="vm.editBlock()" novalidate method="POST">
+                        <input type="text" ng-model="vm.contents[$index + 1].title" />
+
+                        <div class="progress" ng-show="vm.editUploader.isUploading">
+                            <div class="progress-bar" role="progressbar" ng-style="{ 'width': vm.editUploader.progress + '%' }"></div>
+                        </div>
+                        <input ng-hide="vm.editUploader.isUploading" type="file" nv-file-select="" uploader="vm.editUploader" />
+
+                        <input type="textarea" ng-model="vm.contents[$index + 1].text" />
+                        <button type="submit">Sauvegarder</button>
+                    </form>
+                </span>
+            </span>
+        </div>
+    </span>
+
+    <span ng-if="$index == 0">
+        <span ng-hide="content.showEdit">
+            <span class="edit-block" ng-click="vm.modeEdit($index)">Edit</span>
+            <div class="span2">
+                <img ng-src="{{content.imgUrl}}" alt="">
+            </div><!-- /span2 -->
+
+            <div class="span2 aboutzone">
+                <p><b ng-bind="content.title"></b></p>
+                <p ng-bind="content.text"></p>
+            </div><!-- /span2 -->
+        </span>
+        <span ng-show="content.showEdit">
+            <form name="editBlockForm" ng-submit="vm.editBlock()" novalidate method="POST">
+                <input type="text" ng-model="content.title" />
+
+                <div class="progress" ng-show="vm.editUploader.isUploading">
+                    <div class="progress-bar" role="progressbar" ng-style="{ 'width': vm.editUploader.progress + '%' }"></div>
+                </div>
+                <input ng-hide="vm.editUploader.isUploading" type="file" nv-file-select="" uploader="vm.editUploader" />
+
+                <input type="textarea" ng-model="content.text" />
+                <button type="submit">Sauvegarder</button>
+            </form>
+        </span>
+
+
+        <span ng-if="vm.contents.length > ($index + 1)">
+            <span ng-hide="vm.contents[$index + 1].showEdit">
+                <span class="edit-block" ng-click="vm.modeEdit($index + 1)">Edit</span>
+                <div class="span2">
+                    <img ng-src="{{vm.contents[$index + 1].imgUrl}}" alt="">
+                </div><!-- /span2 -->
+                <div class="span2 aboutzone">
+                    <p><b>{{vm.contents[$index + 1].title}}</b></p>
+                    <p>{{vm.contents[$index + 1].text}}</p>
+                </div><!-- /span2 -->
+            </span>
+            <span ng-show="vm.contents[$index + 1].showEdit">
+                <form name="editBlockForm" ng-submit="vm.editBlock()" novalidate method="POST">
+                    <input type="text" ng-model="vm.contents[$index + 1].title" />
+
+                    <div class="progress" ng-show="vm.editUploader.isUploading">
+                        <div class="progress-bar" role="progressbar" ng-style="{ 'width': vm.editUploader.progress + '%' }"></div>
+                    </div>
+                    <input ng-hide="vm.editUploader.isUploading" type="file" nv-file-select="" uploader="vm.editUploader" />
+
+                    <input type="textarea" ng-model="vm.contents[$index + 1].text" />
+                    <button type="submit">Sauvegarder</button>
+                </form>
+            </span>
+        </span>
+    </span>
+</div>
+<br ng-repeat-end ng-if="$index % 2 == 0" />
+
+
+
+
+<div class="row-fluid">
+    <form name="addBlockForm" ng-submit="vm.addBlock()" novalidate method="POST">
+        <input type="text" ng-model="vm.addContent.title" />
+
+        <div class="progress" ng-show="vm.addUploader.isUploading">
+            <div class="progress-bar" role="progressbar" ng-style="{ 'width': vm.addUploader.progress + '%' }"></div>
+        </div>
+        <input ng-hide="vm.addUploader.isUploading" type="file" nv-file-select="" uploader="vm.addUploader" />
+
+        <input type="textarea" ng-model="vm.addContent.text" />
+        <button type="submit">Sauvegarder</button>
+    </form>
+</div>

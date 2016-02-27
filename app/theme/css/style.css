@@ -278,12 +278,11 @@ h6.title-footer {
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	background-size:cover;
-	height: 525px;
+	height: 240px;
 }
 
 #headerwrap h1 {
 	color:#ffffff;
-	margin-top: 140px;
 	padding-bottom: 30px;
 	letter-spacing: 8px;
 }
@@ -1023,4 +1022,30 @@ and (orientation : portrait) {
 		width: 80px;
 	}
 
+}
+
+.not-version-mobile {
+	display:none;
+}
+
+@media screen and (min-width: 768px) {
+	.not-version-mobile {
+		display: block;
+	}
+
+	.mobile-version {
+		display: none;
+	}
+}
+
+#headerwrap .edit-block {
+	color: white;
+	position: relative;
+	top: -10px;
+}
+
+#form-banner-home {
+	background-color: white;
+	position: relative;
+	width: 400px;
 }

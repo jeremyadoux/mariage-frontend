@@ -1,0 +1,21 @@
+<div class="span4 greyzone">
+    <span ng-if="!vm.showEdited">
+        <span class="edit-block" ng-click="vm.showEdited = !vm.showEdited">Edit</span>
+        <h4 ng-bind="vm.content.title"></h4>
+        <span ng-bind-html="vm.content.text"></span>
+    </span>
+
+    <form ng-if="vm.showEdited" name="editBlockForm" ng-submit="vm.editBlock()" novalidate method="POST">
+        <h4><input type="text" ng-model="vm.content.title" /></h4>
+
+        <div class="image-uploaded" ng-show="vm.config.image">
+            <div class="progress" ng-show="vm.uploader.isUploading">
+                <div class="progress-bar" role="progressbar" ng-style="{ 'width': vm.uploader.progress + '%' }"></div>
+            </div>
+            <input ng-hide="vm.uploader.isUploading" type="file" nv-file-select="" uploader="vm.uploader" />
+        </div>
+
+        <span><input ckeditor="optionsCkeditor" type="textarea" ng-model="vm.content.text" /></span>
+        <button type="submit">Sauvegarder</button>
+    </form>
+</div>

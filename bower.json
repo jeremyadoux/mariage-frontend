@@ -7,14 +7,15 @@
   ],
   "dependencies": {
     "jquery": "latest",
-    "angular": "latest",
-    "angular-sanitize": "latest",
-    "angular-cookies": "latest",
-    "angular-resource" : "latest",
+    "angular": "1.4",
+    "angular-sanitize": "1.4",
+    "angular-cookies": "1.4",
+    "angular-resource" : "1.4",
     "angular-ui-router" : "latest",
     "angular-file-upload" : "latest",
     "ckeditor": "latest",
     "angular-ckeditor": "latest",
-    "jquery-ui": "latest"
+    "jquery-ui": "latest",
+    "ng-dialog": "latest"
   }
 }
