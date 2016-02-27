@@ -1049,3 +1049,5 @@ and (orientation : portrait) {
 	position: relative;
 	width: 400px;
 }
+
+.angular-google-map-container { height: 400px; }

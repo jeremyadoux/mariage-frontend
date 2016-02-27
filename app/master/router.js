@@ -23,7 +23,8 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
         .state('map', {
             url: '/logistique',
             templateUrl: 'map.html',
-            controller: 'MapController'
+            controller: 'MapController',
+            controllerAs: 'vm'
         })
         .state('login', {
             url: '/login',

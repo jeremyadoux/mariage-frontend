@@ -13,8 +13,7 @@
         Contributor.logout()
             .$promise
             .then(function(response) {
-                console.log("logout")
-                //$state.go('home');
+                $state.go('home');
         });
 
     }
