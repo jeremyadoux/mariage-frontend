@@ -17,6 +17,9 @@
     "angular-ckeditor": "latest",
     "jquery-ui": "latest",
     "ng-dialog": "latest",
-    "angular-google-maps": "latest"
+    "angular-google-maps": "latest",
+    "humanize-duration": "latest",
+    "momentjs": "latest",
+    "angular-timer": "latest"
   }
 }
