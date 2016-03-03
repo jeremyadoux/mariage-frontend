@@ -1,47 +1,25 @@
-var http = require("http"),
-    url = require("url"),
-    path = require("path"),
-    fs = require("fs"),
-    port = 8888,
-    pathToFolder = "static/html",
-    pathToRes = "static";
+/**
+ * Created by jadoux on 06/01/2016.
+ */
+var connect = require('connect');
+var serveStatic = require('serve-static');
 
-http.createServer(function(request, response) {
-    var uri = url.parse(request.url).pathname;
+// create a new instance of Connect
+var app = connect();
+// set server port
+var port = 8888;
 
+// custom middleware
+/*app.use(function(req, res, next) {
+ //req.headers.host = 'http://frontend.local' // to change the host header
+ next()
+ });*/
 
-    //Check if we want a resource element
-    var regex = "/static(.*)/";
-    if(uri.match(regex)) {
-        var res = uri.substring(7)
-            , filename = path.join(process.cwd(), pathToRes + res);
-    } else {
-        var filename = path.join(process.cwd(), pathToFolder + uri);
-    }
-    console.log(filename);
-    fs.exists(filename, function(exists) {
-        if(!exists) {
-            response.writeHead(404, {"Content-Type": "text/plain"});
-            response.write("404 Not Found\n");
-            response.end();
-            return;
-        }
+// serve static files using dedicated middleware
+app.use(serveStatic('static/html'));
+app.use(serveStatic(__dirname));
 
-        if (fs.statSync(filename).isDirectory()) filename += '/index.html';
-
-        fs.readFile(filename, "binary", function(err, file) {
-            if(err) {
-                response.writeHead(500, {"Content-Type": "text/plain"});
-                response.write(err + "\n");
-                response.end();
-                return;
-            }
-
-            response.writeHead(200);
-            response.write(file, "binary");
-            response.end();
-        });
-    });
-}).listen(parseInt(port, 10));
-
-console.log("Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
+// start server
+app.listen(port, function() {
+    console.log('Server listening on port %d', port);
+});

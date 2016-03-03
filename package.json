@@ -20,6 +20,8 @@
     "gulp-rename": "latest",
     "gulp-watch": "latest",
     "gulp-batch": "latest",
-    "del": "latest"
+    "del": "latest",
+    "connect": "3.4.0",
+    "serve-static": "^1.10.0"
   }
 }

@@ -6,8 +6,13 @@
         .controller('MapController', MapController);
 
 
-    function MapController() {
+    MapController.$inject = ['Comment'];
+
+    function MapController(Comment) {
         var vm = this;
+
+        vm.loadComment = loadComment;
+        vm.saveComment = saveComment;
 
         vm.configBanner = {
             "image": true
@@ -40,6 +45,24 @@
             center: { latitude: 39.8282, longitude: -98.5795 },
             zoom: 4
         };
+
+
+        function loadComment() {
+            Comment.find()
+                .$promise
+                .then(function (response) {
+                    vm.comments = response;
+                });
+        }
+
+        function saveComment() {
+            Comment.create(vm.comment)
+                .$promise
+                .then(function(response) {
+                    vm.comment = {};
+
+                });
+        }
     }
 
 })();
