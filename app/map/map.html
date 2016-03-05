@@ -10,32 +10,33 @@
             </p>
             <div class="alert alert-success"  ng-show="vm.messageContactCreated" ng-bind="vm.messageContactCreated">
             </div>
-
-            <form ng-submit="vm.sendContact()" novalidate method="POST">
-                <div class="control-group">
-                    <label class="control-label" for="inputName">Votre nom</label>
-                    <div class="controls">
-                        <input id="inputName" type="text" placeholder="Votre nom" ng-model="vm.contact.name" />
+                <p>
+                <form ng-submit="vm.sendContact()" novalidate method="POST">
+                    <div class="control-group">
+                        <label class="control-label" for="inputName">Votre nom</label>
+                        <div class="controls">
+                            <input id="inputName" type="text" placeholder="Votre nom" ng-model="vm.contact.name" />
+                        </div>
                     </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="inputEmail">Votre Email</label>
-                    <div class="controls">
-                        <input id="inputEmail" type="text" placeholder="Votre email" ng-model="vm.contact.email" />
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail">Votre Email</label>
+                        <div class="controls">
+                            <input id="inputEmail" type="text" placeholder="Votre email" ng-model="vm.contact.email" />
+                        </div>
                     </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="inputContent">Votre demande</label>
-                    <div class="controls">
-                        <textarea id="inputContent" placeholder="Votre demande" rows="3" ng-model="vm.contact.content"></textarea>
+                    <div class="control-group">
+                        <label class="control-label" for="inputContent">Votre demande</label>
+                        <div class="controls">
+                            <textarea id="inputContent" placeholder="Votre demande" rows="3" ng-model="vm.contact.content"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="control-group">
-                    <div class="controls">
-                        <button type="submit" class="btn">Envoyer</button>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" class="btn">Envoyer</button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </p>
         </div><!-- /span4 -->
 
         <div class="span4 whitezone">
