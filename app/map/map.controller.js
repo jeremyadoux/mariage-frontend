@@ -28,7 +28,7 @@
                     "longitude": "4.801493"
                 },
                 "window": {
-                    "title": "La salle des fêtes"
+                    "title": "La salle des fÃªtes"
                 }
             }
         ];
@@ -60,7 +60,7 @@
             Contact.create(vm.contact)
                 .$promise
                 .then(function(response) {
-                    vm.messageContactCreated = "Votre demande de contact a été envoyé, nous reviendrons vers vous rapidement par mail.";
+                    vm.messageContactCreated = "Votre demande de contact a Ã©tÃ© envoyÃ©, nous reviendrons vers vous rapidement par mail.";
                 });
         }
     }
