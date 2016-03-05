@@ -8,8 +8,8 @@
             <p>
                 Ce formulaire est à votre disposition pour nous contacter en cas de besoin. Nous vous répondrons dans les plus brefs délais.
             </p>
-            <div class="alert alert-success"  ng-show="vm.messageContactCreated" ng-bind="vm.messageContactCreated"></div>
-            <div>
+            <div class="mode-p">
+                <div class="alert alert-success"  ng-show="vm.messageContactCreated" ng-bind="vm.messageContactCreated"></div>
                 <form ng-submit="vm.sendContact()" novalidate method="POST">
                     <div class="control-group">
                         <label class="control-label" for="inputName">Votre nom</label>
