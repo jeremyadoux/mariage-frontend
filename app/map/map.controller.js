@@ -60,7 +60,7 @@
             Contact.create(vm.contact)
                 .$promise
                 .then(function(response) {
-                    vm.messageContactCreated = "Votre demande de contact a été envoyé, nous reviendrons vers vous rapidement par mail.";
+                    vm.messageContactCreated = "Votre demande de contact a été envoyée, nous reviendrons vers vous rapidement par mail.";
                 });
         }
     }
