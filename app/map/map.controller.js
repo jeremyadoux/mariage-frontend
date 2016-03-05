@@ -6,14 +6,16 @@
         .controller('MapController', MapController);
 
 
-    MapController.$inject = ['Comment'];
+    MapController.$inject = ['Comment', 'Contact'];
 
-    function MapController(Comment) {
+    function MapController(Comment, Contact) {
         var vm = this;
 
         vm.loadComment = loadComment;
         vm.saveComment = saveComment;
+        vm.sendContact = sendContact;
 
+        vm.messageContactCreated = false;
         vm.configBanner = {
             "image": true
         };
@@ -22,27 +24,17 @@
             {
                 "id": "0",
                 "coords": {
-                    "latitude": "45.5200",
-                    "longitude": "-122.6819"
+                    "latitude": "46.174980",
+                    "longitude": "4.801493"
                 },
                 "window": {
-                    "title": "Portland, OR"
-                }
-            },
-            {
-                "id": "1",
-                "coords": {
-                    "latitude": "40.7903",
-                    "longitude": "-73.9597"
-                },
-                "window" : {
-                    "title": "Manhattan New York, NY"
+                    "title": "La salle des fêtes"
                 }
             }
         ];
 
         vm.map = {
-            center: { latitude: 39.8282, longitude: -98.5795 },
+            center: { latitude: 46.174980, longitude: 4.801493 },
             zoom: 4
         };
 
@@ -61,6 +53,14 @@
                 .then(function(response) {
                     vm.comment = {};
 
+                });
+        }
+
+        function sendContact() {
+            Contact.create(vm.contact)
+                .$promise
+                .then(function(response) {
+                    vm.messageContactCreated = "Votre demande de contact a été envoyé, nous reviendrons vers vous rapidement par mail.";
                 });
         }
     }
