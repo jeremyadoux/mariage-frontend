@@ -1094,3 +1094,6 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
 	font-size: 13px;
 	letter-spacing: 1px;
 }
+.greyzone input, .greyzone textarea {
+	width: 100%;
+}
