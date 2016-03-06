@@ -30,6 +30,7 @@
 }
 
 .dl-menuwrapper button {
+	background-image:url('../img/cuir-texture.jpg');
 	background: #28a0ff;
 	border: none;
 	width: 48px;
@@ -137,6 +138,7 @@
 }
 
 .dl-menuwrapper .dl-menu.dl-menuopen {
+	background-image:url('../img/cuir-texture.jpg');
 	opacity: 0.8;
 	pointer-events: auto;
 	-webkit-transform: translateY(0px);
