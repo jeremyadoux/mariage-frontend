@@ -13,7 +13,8 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
         .state('timeline', {
             url: '/programme',
             templateUrl: 'timeline.html',
-            controller: 'TimelineController'
+            controller: 'TimelineController',
+            controllerAs: 'vm'
         })
         .state('contact', {
             url: '/contact',
