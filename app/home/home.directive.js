@@ -29,7 +29,7 @@
         var vm = this;
         vm.canEdit = LoopBackAuth.accessTokenId != null;
         vm.showEdited = false;
-        vm.urlApi = "http://192.168.100.100:443";
+        vm.urlApi = "http://api.zarazetti.fr";
         //Function definition
         vm.editBlock = editBlock;
         vm.uploader = new FileUploader({
