@@ -4,7 +4,7 @@
 module.controller('TimelineController', ["$scope", "$timeout", function($scope, $timeout) {
     var vm = this;
 
-    $scope.configBanner = {
+    vm.configBanner = {
         "image": true
     };
 
