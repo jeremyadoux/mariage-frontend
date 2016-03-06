@@ -49,6 +49,9 @@
                 vm.config.image = false; //Default value
             }
 
+            if(!angular.isDefined(vm.config.class)) {
+                vm.config.class = "greyzone"; //Default value
+            }
 
             if (angular.isDefined(vm.name)) {
                 Block.find({filter: {where: {name: vm.name}, include: 'image'}})

@@ -15,6 +15,10 @@
         vm.saveComment = saveComment;
         vm.sendContact = sendContact;
 
+        vm.configText = {
+            "class": "whitezone"
+        };
+
         vm.messageContactCreated = false;
         vm.configBanner = {
             "image": true
