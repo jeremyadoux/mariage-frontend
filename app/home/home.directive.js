@@ -29,7 +29,7 @@
         var vm = this;
         vm.canEdit = LoopBackAuth.accessTokenId != null;
         vm.showEdited = false;
-        vm.urlApi = "http://api.zarazetti.fr";
+        vm.urlApi = urlApi;
         //Function definition
         vm.editBlock = editBlock;
         vm.uploader = new FileUploader({
@@ -62,7 +62,7 @@
                             vm.content = {
                                 'title': 'You need to set a content',
                                 'name': vm.name,
-                                'text': 'You need to set a content',
+                                'text': '',
                                 'styleImage': ''
                             };
                         } else {

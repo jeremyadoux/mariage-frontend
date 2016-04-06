@@ -10,7 +10,7 @@ module.controller('TimelineController', ["$scope", "$timeout", function($scope, 
 
     $timeout(function() {
         var timelineBlocks = $('.cd-timeline-block'),
-            offset = 0.6;
+            offset = 0.7;
 
         //hide timeline blocks which are outside the viewport
         hideBlocks(timelineBlocks, offset);

@@ -27,7 +27,7 @@
 
     function blockListContentController(Block, FileUploader, LoopBackAuth) {
         var vm = this;
-        vm.urlApi = "http://api.zarazetti.fr";
+        vm.urlApi = urlApi;
         vm.canEdit = LoopBackAuth.accessTokenId != null;
         vm.addContent = {};
         vm.currentEditPosition = -1;

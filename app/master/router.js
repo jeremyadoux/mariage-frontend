@@ -27,6 +27,12 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
             controller: 'MapController',
             controllerAs: 'vm'
         })
+        .state('biography', {
+            url: '/biography',
+            templateUrl: 'biography.html',
+            controller: 'BiographyController',
+            controllerAs: 'vm'
+        })
         .state('login', {
             url: '/login',
             templateUrl: 'login.html',
